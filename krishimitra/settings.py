@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-%nh7*pxw!1%^vxvm@!*t1*du_=ff%xn&-l--iwg-t7rqv1galn'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['https://krishimitraai-marketplace.onrender.com/']
 MEDIA_URL = '/media/'
