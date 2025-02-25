@@ -22,14 +22,17 @@ import dj_database_url  # Ensure this is also imported
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-%nh7*pxw!1%^vxvm@!*t1*du_=ff%xn&-l--iwg-t7rqv1galn'
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv("DJANGO_DEBUG", "False") == "True"
 
+ALLOWED_HOSTS = [
+    "krishimitraai-marketplace-0yj4.onrender.com",  # Replace with your actual Render URL
+    "127.0.0.1",
+    "localhost",
+]
 
-ALLOWED_HOSTS = ['https://krishimitraai-marketplace-0yj4.onrender.com/']
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
