@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-%nh7*pxw!1%^vxvm@!*t1*du_=ff%xn&-l--iwg-t7rqv1galn
 DEBUG = os.getenv("DJANGO_DEBUG", "False") == "True"
 
 
-ALLOWED_HOSTS = ['https://krishimitraai-marketplace.onrender.com/']
+ALLOWED_HOSTS = ['https://krishimitraai-marketplace-0yj4.onrender.com/']
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
