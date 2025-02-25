@@ -1,0 +1,103 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #2E7D32;
+    padding: 15px;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Product Section */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+/* Product Grid */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjusts to screen size */
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Product Cards */
+.product-card {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease-in-out;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Product Image */
+.product-card img {
+    width: 100%;
+    max-width: 150px;  /* **Smaller fixed width** */
+    height: 150px;  /* **Smaller fixed height** */
+    object-fit: cover; /* Ensures images don’t stretch */
+    border-radius: 10px;
+}
+
+/* Product Name */
+.product-card h3 {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+/* Product Price */
+.product-card p {
+    font-size: 14px;
+    color: #388E3C;
+    font-weight: bold;
+}
+
+/* Add to Cart Button */
+.product-card .add-to-cart {
+    background-color: #388E3C;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.product-card .add-to-cart:hover {
+    background-color: #2E7D32;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+canvas {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 700px;
+}

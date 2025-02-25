@@ -1,0 +1,51 @@
+{% extends 'store/base.html' %}
+
+{% block content %}
+<h2>Farmer Dashboard</h2>
+
+<!-- Total Earnings -->
+<p><strong>Total Earnings:</strong> ₹{{ total_earnings }}</p>
+
+<!-- Sales Table -->
+<table border="1">
+    <tr>
+        <th>Product</th>
+        <th>Quantity Sold</th>
+    </tr>
+    {% for sale in sales_data %}
+    <tr>
+        <td>{{ sale.product__name }}</td>
+        <td>{{ sale.total_sold }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<!-- Bar Chart -->
+<canvas id="salesChart"></canvas>
+
+<!-- Chart.js for Dynamic Graph -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    var ctx = document.getElementById('salesChart').getContext('2d');
+    var salesChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: [{% for sale in sales_data %}"{{ sale.product__name }}",{% endfor %}],
+            datasets: [{
+                label: 'Sales Quantity',
+                data: [{% for sale in sales_data %}{{ sale.total_sold }},{% endfor %}],
+                backgroundColor: 'rgba(54, 162, 235, 0.6)',
+                borderColor: 'rgba(54, 162, 235, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                y: { beginAtZero: true }
+            }
+        }
+    });
+</script>
+
+{% endblock %}
