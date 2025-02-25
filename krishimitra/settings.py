@@ -27,7 +27,7 @@ import dj_database_url  # Ensure this is also imported
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv("DJANGO_DEBUG", "False") == "True"
 
-ALLOWED_HOSTS = [ * ]
+ALLOWED_HOSTS = [ "*"]
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
